@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures that the entire viewport height is covered */
+  transition: background-color 0.5s ease;
+  position: relative;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+.light {
+  background-color: #ffffff; /* Light theme background color */
+}
+
+.dark {
+  background-color: #333333; /* Dark theme background color */
+}
+.dark-text{
+  color: #CA4246;
+  background-image: linear-gradient(
+        45deg,
+        #CA4246 16.666%, 
+        #E16541 16.666%, 
+        #E16541 33.333%, 
+        #F18F43 33.333%, 
+        #F18F43 50%, 
+        #8B9862 50%, 
+        #8B9862 66.666%, 
+        #476098 66.666%, 
+        #476098 83.333%, 
+        #A7489B 83.333%);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+}
+.light-text{
+  color: purple;
+  background-image: linear-gradient(
+        45deg,
+        #CA4246 16.666%, 
+        #E16541 16.666%, 
+        #E16541 33.333%, 
+        #F18F43 33.333%, 
+        #F18F43 50%, 
+        #8B9862 50%, 
+        #8B9862 66.666%, 
+        #476098 66.666%, 
+        #476098 83.333%, 
+        #A7489B 83.333%);
+  
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  
+  /* Animate the text when loading the element. */
+    /* This animates it on page load and when hovering out. */
+    animation: rainbow-text-simple-animation-rev 0.75s ease forwards;
+
+}
+
+.toggle-button {
+  /* Button styles */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: goldenrod;
+}
+
+/* Transition for light to dark */
+.light.dark {
+  background: linear-gradient(from left to right, red 50%, rgb(125, 31, 125) 50%);
+  background-size: 200% 100%;
+  transition: background-position 0.5s ease;
+}
+
+/* Transition for dark to light */
+.dark.light {
+  background: linear-gradient(to left, rgb(127, 18, 127) 50%, red 50%);
+  background-size: 200% 100%;
+  transition: background-position 0.5s ease;
+}
+
+.content {
+  flex: 1; /* Take up remaining space */
+}
